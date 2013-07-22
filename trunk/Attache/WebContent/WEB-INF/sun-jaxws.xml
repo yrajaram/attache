@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints
+  xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+  version="2.0">
+  <endpoint
+      name="jaxws-AttacheService"
+      implementation="com.herakles.service.impl.EBMSImpl"
+      url-pattern="/soap/AttacheService">
+              <javaee:handler-chains xmlns:javaee="http://java.sun.com/xml/ns/javaee">
+            <javaee:handler-chain>
+                <javaee:handler>
+                    <javaee:handler-class>com.herakles.service.impl.EBMSImpl
+                    </javaee:handler-class>
+                </javaee:handler>
+            </javaee:handler-chain>
+        </javaee:handler-chains>
+      </endpoint>
+    <endpoint
+      name="jaxws-HelloService"
+      implementation="com.herakles.service.impl.HelloImpl"
+      url-pattern="/soap/HelloService"/>
+</endpoints>

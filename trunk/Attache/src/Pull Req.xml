@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header>
+		<eb:Messaging
+			xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+			xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd"
+			soapenv:mustUnderstand="true">
+			<eb:SignalMessage>
+				<eb:MessageInfo>
+					<eb:Timestamp>2010-10-25T21:03:33Z</eb:Timestamp>
+					<eb:MessageId>urn:uuid:Sample-PULL-8567EA38DCCF66AE581288040614565@987654321$3A1$11.1.client.com
+					</eb:MessageId>
+					<eb:RefToMessageId>urn:uuid:ATSPERFLT_Q1FY11_1288039587229.@yrajaram$3a1$1.1.ATNT.com
+					</eb:RefToMessageId>
+				</eb:MessageInfo>
+				<eb:Receipt />
+			</eb:SignalMessage>
+		</eb:Messaging>
+		<mesha:MeshaDoneBlock xmlns:mesha="http://client.com">
+			<mesha:MeshaDone>true</mesha:MeshaDone>
+		</mesha:MeshaDoneBlock>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ns2:pull xmlns:ns2="http://api.service.herakles.com/">
+			<arg0>trte</arg0>
+		</ns2:pull>
+	</soapenv:Body>
+</soapenv:Envelope>

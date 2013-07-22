@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+	<S:Header>
+		<X:Security xmlns:X="http://...wsssecurity...">
+			<X:BinarySecurityToken xmlns:X="http://...wsssecurity...">kjh...897=
+			</X:BinarySecurityToken>
+		</X:Security>
+		<ns3:messaging xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns:ns3="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"
+			ns2:mustUnderstand="1">
+			<ns3:SignalMessage>
+				<ns3:MessageInfo>
+					<ns3:Timestamp>2013-03-04T17:07:02.381-08:00</ns3:Timestamp>
+					<ns3:MessageId>Ack Msg ID</ns3:MessageId>
+					<ns3:RefToMessageId>Refto Id</ns3:RefToMessageId>
+				</ns3:MessageInfo>
+				<ns3:Receipt />
+			</ns3:SignalMessage>
+		</ns3:messaging>
+	</S:Header>
+	<S:Body>
+		<ns2:pushResponse xmlns:ns2="http://api.service.herakles.com/">
+			<return>PUSH false</return>
+		</ns2:pushResponse>
+	</S:Body>
+</S:Envelope>

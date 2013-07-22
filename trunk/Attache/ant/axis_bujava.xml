@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<project default="main" basedir="..">
+
+	<echo message="pulling in property files" />
+	<property file="axis_bujava.properties" />
+	
+<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+  <classpath>
+    <fileset dir="WebContent/WEB-INF/lib" includes="*.jar" />
+  </classpath>
+</taskdef>
+
+	
+	<echo message="calling the web services generation ant task: axis_bujava" />
+	<target name="main">
+		<mkdir dir="../build/generated-src/com/herakles/jaxb/ebms/v3" />
+		<xjc destdir="src" removeOldOutput="yes" package="com.herakles.jaxb.ebms.v3">
+			<schema dir="schema/ebms/v3" includes="*.xsd" />
+			<depends dir="schema/ebms/v3" includes="*.dtd" />
+			<produces dir="../build/generated-src/com/herakles/jaxb/ebms/v3" includes="**/*" />
+		</xjc>
+
+	</target>
+
+</project>

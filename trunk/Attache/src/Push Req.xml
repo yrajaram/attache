@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header>
+		<eb:Messaging
+			xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+			xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd"
+			soapenv:mustUnderstand="true">
+
+			<eb:UserMessage>
+				<eb:MessageInfo>
+					<eb:Timestamp>Tue Jul 20 20:51:32 2010 UTC</eb:Timestamp>
+					<eb:MessageId>urn:uuid:SamplePUSH-messagei-id-87229.@yrajaram$3a1$1.1.ATNT.com
+					</eb:MessageId>
+				</eb:MessageInfo>
+				<eb:PartyInfo>
+					<eb:From>
+						<eb:PartyId>yrajaram$3a1$1.1.ATNT.com</eb:PartyId>
+						<eb:Role>http://example.org/roles/Buyer</eb:Role>
+					</eb:From>
+					<eb:To>
+						<eb:PartyId>987654321$3A1$11.1.client.com</eb:PartyId>
+						<eb:Role>http://example.org/roles/Seller</eb:Role>
+					</eb:To>
+				</eb:PartyInfo>
+				<eb:CollaborationInfo />
+			</eb:UserMessage>
+		</eb:Messaging>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ns2:push xmlns:ns2="http://api.service.herakles.com/">
+			<arg0>trte</arg0>
+		</ns2:push>
+	</soapenv:Body>
+</soapenv:Envelope>
